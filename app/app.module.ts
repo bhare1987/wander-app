@@ -4,7 +4,7 @@ import { NativeScriptModule } from "nativescript-angular/platform";
 import { NativeScriptRouterModule } from "nativescript-angular/router";
 import { AppRoutes, AppComponents } from "./app.routing";
 
-import { AppComponent } from "./app.component";
+import { AppComponent } from "./components/app.component";
 import { HomeComponent } from "./components/home/home.component";
 
 @NgModule({
