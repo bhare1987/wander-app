@@ -1,0 +1,16 @@
+<ActionBar title="Wander">
+  <ActionItem ios.position="left">
+      <StackLayout>
+          <Label (tap)="openMenu()" text="&#xf0c9;" class="fa"></Label>
+      </StackLayout>
+  </ActionItem>
+</ActionBar>
+<GridLayout>
+    <ListView [items]="notifications" class="list-group">
+        <Template let-notification="item">
+            <StackLayout class="list-group-item">
+                <Label text="{{ notification.message }}"></Label>
+            </StackLayout>
+        </Template>
+    </ListView>
+</GridLayout>
