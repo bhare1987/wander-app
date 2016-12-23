@@ -5,7 +5,7 @@ import { NativeScriptRouterModule } from "nativescript-angular/router";
 import { AppRoutes, AppComponents } from "./app.routing";
 
 import { AppComponent } from "./components/app.component";
-import { HomeComponent } from "./components/home/home.component";
+import { SideDrawerService } from "./shared/sidedrawer.service";
 
 @NgModule({
     declarations: [
@@ -18,6 +18,9 @@ import { HomeComponent } from "./components/home/home.component";
         NativeScriptModule,
         NativeScriptRouterModule,
         NativeScriptRouterModule.forRoot(AppRoutes)
+    ],
+    providers: [
+        SideDrawerService
     ],
     schemas: [NO_ERRORS_SCHEMA]
 })
