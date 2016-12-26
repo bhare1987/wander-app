@@ -5,7 +5,10 @@
             <Label text="Navigation Menu"></Label>
         </StackLayout>
         <StackLayout class="sideStackLayout">
-            <Label text="Home" class="sideLabel sideLightGrayLabel"></Label>
+            <Label text="Home" [nsRouterLink]="['/home']"  class='sideLabel' nsRouterLinkActive="active" [nsRouterLinkActiveOptions]="{exact:true}"></Label>
+            <Label text="Map" [nsRouterLink]="['/map']" class='sideLabel' ></Label>
+            <Label text="Login" [nsRouterLink]="['/login']" class='sideLabel' ></Label>
+
             <Label text="Friends" class="sideLabel"></Label>
             <Label text="Places" class="sideLabel"></Label>
             <Label text="Invite Friends" class="sideLabel sideLightGrayLabel"></Label>

@@ -23,6 +23,8 @@
     "@angular/router": "3.2.1",
     "font-awesome": "^4.7.0",
     "nativescript-angular": "1.2.0",
+    "nativescript-google-maps-sdk": "^1.4.2",
+    "nativescript-oauth": "^1.0.2",
     "nativescript-telerik-ui": "^1.5.1",
     "nativescript-theme-core": "^0.2.1",
     "reflect-metadata": "~0.1.8",
