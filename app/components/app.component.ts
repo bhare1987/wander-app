@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild } from "@angular/core";
+import {Router, NavigationEnd} from '@angular/router';
 import { RadSideDrawer } from "nativescript-telerik-ui/sidedrawer";
 import { RadSideDrawerComponent, SideDrawerType } from "nativescript-telerik-ui/sidedrawer/angular";
 import { SideDrawerService } from "../shared/sidedrawer.service";
@@ -9,9 +10,10 @@ import { SideDrawerService } from "../shared/sidedrawer.service";
     styleUrls: ["./components/app.component.css"]
 })
 export class AppComponent implements OnInit { 
-    constructor(private sideDrawerService: SideDrawerService ) {
-
-    }
+    constructor(
+        private router: Router,
+        private sideDrawerService: SideDrawerService
+    ) {}
 
     @ViewChild(RadSideDrawerComponent) public drawerComponent: RadSideDrawerComponent;
     private drawer: SideDrawerType;
@@ -22,5 +24,10 @@ export class AppComponent implements OnInit {
             triggerMenu => this.drawer.toggleDrawerState()
         );
         this.drawer.ios.attachDrawerToWindow();
+        this.router.events.subscribe((e) => {
+            if (e instanceof NavigationEnd) {
+                this.drawer.closeDrawer();
+            }
+        });
     } 
 }
