@@ -6,7 +6,8 @@ import { LoginComponent } from "./components/login/login.component";
 
 
 export const AppRoutes: any = [
-    { path: "", component: HomeComponent },
+    { path: "", redirectTo: "home", pathMatch: "full" },
+    { path: "home", component: HomeComponent },
     { path: "friends", component: FriendsComponent },
     { path: "notifications", component: NotificationsComponent },
     { path: "map", component: MapComponent },

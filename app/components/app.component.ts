@@ -5,7 +5,8 @@ import { SideDrawerService } from "../shared/sidedrawer.service";
 
 @Component({
     selector: "wander-app",
-    templateUrl: "./components/app.component.html"
+    templateUrl: "./components/app.component.html",
+    styleUrls: ["./components/app.component.css"]
 })
 export class AppComponent implements OnInit { 
     constructor(private sideDrawerService: SideDrawerService ) {
@@ -20,7 +21,6 @@ export class AppComponent implements OnInit {
         this.sideDrawerService.triggerMenu.subscribe(
             triggerMenu => this.drawer.toggleDrawerState()
         );
-    }
-
-    
+        this.drawer.ios.attachDrawerToWindow();
+    } 
 }
