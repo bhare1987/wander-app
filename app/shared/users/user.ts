@@ -1,5 +1,6 @@
 export class User {
   email: string;
+  name: string;
   photo: string;
-  private token: string;
+  token: string;
 }
