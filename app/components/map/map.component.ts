@@ -5,7 +5,7 @@ registerElement("MapView", () => require("nativescript-google-maps-sdk").MapView
 
 @Component({
   moduleId: module.id,
-  selector: 'Map',
+  selector: 'map',
   templateUrl: 'map.component.html',
   styleUrls: ['map.component.css']
 })
