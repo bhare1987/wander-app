@@ -1,24 +1,36 @@
 <page-router-outlet></page-router-outlet>
-<RadSideDrawer tkExampleTitle tkToggleNavButton>
+<RadSideDrawer tkExampleTitle tkToggleNavButton [showOverNavigation]="true">
     <StackLayout tkDrawerContent class="sideStackLayout">
-        <StackLayout class="sideTitleStackLayout">
-            <Label text="Navigation Menu"></Label>
+        <StackLayout class="sidedrawer-header">
+            <!--<Image class="sidedrawer-header-image img-circle sidedrawer-left" src="http://placehold.it/25x25"></Image>-->
+            <Label text="User"></Label>
+            <Label text="UserName"></Label>
         </StackLayout>
         <StackLayout class="sideStackLayout">
-            <Label text="Home" [nsRouterLink]="['/home']"  class='sideLabel' nsRouterLinkActive="active" [nsRouterLinkActiveOptions]="{exact:true}"></Label>
-            <Label text="Map" [nsRouterLink]="['/map']" class='sideLabel' ></Label>
-            <Label text="Login" [nsRouterLink]="['/login']" class='sideLabel' ></Label>
-
+            <StackLayout class="sidedrawer-list-item" orientation="horizontal">
+                <Label text="&#xf015;" class="fa" [nsRouterLink]="['/home']" nsRouterLinkActive="active"></Label>
+                <StackLayout>
+                    <Label text="Home" [nsRouterLink]="['/home']" class='sideLabel' nsRouterLinkActive="active" [nsRouterLinkActiveOptions]="{exact:true}"></Label>
+                    <StackLayout class="hr-light"></StackLayout>
+                </StackLayout>
+            </StackLayout>
+            
+            
+            <Label text="Map" [nsRouterLink]="['/map']" class='sideLabel'></Label>
+            <StackLayout class="hr-light"></StackLayout>
+            <Label text="Login" [nsRouterLink]="['/login']" class='sideLabel'></Label>
+            <StackLayout class="hr-light"></StackLayout>
             <Label text="Friends" class="sideLabel"></Label>
+            <StackLayout class="hr-light"></StackLayout>
             <Label text="Places" class="sideLabel"></Label>
+            <StackLayout class="hr-light"></StackLayout>
             <Label text="Invite Friends" class="sideLabel sideLightGrayLabel"></Label>
+            <StackLayout class="hr-light"></StackLayout>
             <Label text="Notifications" class="sideLabel"></Label>
+            <StackLayout class="hr-light"></StackLayout>
             <Label text="Get Help" class="sideLabel"></Label>
+            <StackLayout class="hr-light"></StackLayout>
             <Label text="Settings" class="sideLabel"></Label>
         </StackLayout>
     </StackLayout>
-    <!--<StackLayout tkMainContent>
-        <Label [text]="mainContentText" textWrap="true" class="drawerContentText"></Label>
-        <Button text="OPEN DRAWER" (tap)=openDrawer()></Button>
-    </StackLayout>-->
 </RadSideDrawer>

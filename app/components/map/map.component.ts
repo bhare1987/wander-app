@@ -1,5 +1,5 @@
-import {Component, ElementRef, ViewChild} from '@angular/core';
-import {registerElement} from 'nativescript-angular/element-registry';
+import { Component, ElementRef, ViewChild } from '@angular/core';
+import { registerElement } from 'nativescript-angular/element-registry';
 
 registerElement("MapView", () => require("nativescript-google-maps-sdk").MapView);
 
@@ -11,7 +11,6 @@ registerElement("MapView", () => require("nativescript-google-maps-sdk").MapView
 })
 
 export class MapComponent {
-
    @ViewChild("MapView") mapView: ElementRef;
 
    //Map events

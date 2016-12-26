@@ -1,0 +1,26 @@
+.sideStackLayout {
+    background-color: #333B42;
+    color: #8D8F90;
+}
+.sidedrawer-header {
+    background-color: #333B42;
+    margin-top: 50;
+}
+.sideTitleStackLayout {
+    margin-bottom: 30;
+}
+
+.active {
+    color: #4296CC;
+}
+
+.sidedrawer-list-item Label.fa {
+    font-size: 24;
+    margin-left: 20;
+    margin-right: 20;
+    padding-bottom: 20;
+}
+
+.sideLabel {
+    margin-bottom: 10;
+}
