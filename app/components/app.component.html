@@ -14,23 +14,49 @@
                     <StackLayout class="hr-light"></StackLayout>
                 </StackLayout>
             </StackLayout>
-            
-            
-            <Label text="Map" [nsRouterLink]="['/map']" class='sideLabel'></Label>
-            <StackLayout class="hr-light"></StackLayout>
-            <Label text="Login" [nsRouterLink]="['/login']" class='sideLabel'></Label>
-            <StackLayout class="hr-light"></StackLayout>
-            <Label text="Friends" class="sideLabel"></Label>
-            <StackLayout class="hr-light"></StackLayout>
-            <Label text="Places" class="sideLabel"></Label>
-            <StackLayout class="hr-light"></StackLayout>
-            <Label text="Invite Friends" class="sideLabel sideLightGrayLabel"></Label>
-            <StackLayout class="hr-light"></StackLayout>
-            <Label text="Notifications" class="sideLabel"></Label>
-            <StackLayout class="hr-light"></StackLayout>
-            <Label text="Get Help" class="sideLabel"></Label>
-            <StackLayout class="hr-light"></StackLayout>
-            <Label text="Settings" class="sideLabel"></Label>
+            <StackLayout class="sidedrawer-list-item" orientation="horizontal">
+                <Label text="&#xf0c0;" class="fa" [nsRouterLink]="['/friends']" nsRouterLinkActive="active"></Label>
+                <StackLayout>
+                    <Label text="Friends" [nsRouterLink]="['/friends']" class='sideLabel' nsRouterLinkActive="active" [nsRouterLinkActiveOptions]="{exact:true}"></Label>
+                    <StackLayout class="hr-light"></StackLayout>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout class="sidedrawer-list-item" orientation="horizontal">
+                <Label text="&#xf041;" class="fa" [nsRouterLink]="['/places']" nsRouterLinkActive="active"></Label>
+                <StackLayout>
+                    <Label text="Places" [nsRouterLink]="['/places']" class='sideLabel' nsRouterLinkActive="active" [nsRouterLinkActiveOptions]="{exact:true}"></Label>
+                    <StackLayout class="hr-light"></StackLayout>
+                </StackLayout>
+            </StackLayout>
+            <!--<StackLayout class="sidedrawer-list-item" orientation="horizontal">
+                NOTE: SHOULD WE MAKE THIS AN OPTION UNDER FRIENDS? THAT MAKES MORE SENSE TO ME AND WOULD REDUCE CLUTTER IN THE NAV
+                <Label text="&#xf015;" class="fa" [nsRouterLink]="['/invitations']" nsRouterLinkActive="active"></Label>
+                <StackLayout>
+                    <Label text="Invite Friends" [nsRouterLink]="['/invitations']" class='sideLabel' nsRouterLinkActive="active" [nsRouterLinkActiveOptions]="{exact:true}"></Label>
+                    <StackLayout class="hr-light"></StackLayout>
+                </StackLayout>
+            </StackLayout>-->
+            <StackLayout class="sidedrawer-list-item" orientation="horizontal">
+                <Label text="&#xf0a2;" class="fa" [nsRouterLink]="['/notifications']" nsRouterLinkActive="active"></Label>
+                <StackLayout>
+                    <Label text="Notifications" [nsRouterLink]="['/notifications']" class='sideLabel' nsRouterLinkActive="active" [nsRouterLinkActiveOptions]="{exact:true}"></Label>
+                    <StackLayout class="hr-light"></StackLayout>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout class="sidedrawer-list-item" orientation="horizontal">
+                <Label text="&#xf29c;" class="fa" [nsRouterLink]="['/help']" nsRouterLinkActive="active"></Label>
+                <StackLayout>
+                    <Label text="Get Help" [nsRouterLink]="['/help']" class='sideLabel' nsRouterLinkActive="active" [nsRouterLinkActiveOptions]="{exact:true}"></Label>
+                    <StackLayout class="hr-light"></StackLayout>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout class="sidedrawer-list-item" orientation="horizontal">
+                <Label text="&#xf013;" class="fa" [nsRouterLink]="['/settings']" nsRouterLinkActive="active"></Label>
+                <StackLayout>
+                    <Label text="Settings" [nsRouterLink]="['/settings']" class='sideLabel' nsRouterLinkActive="active" [nsRouterLinkActiveOptions]="{exact:true}"></Label>
+                    <StackLayout class="hr-light"></StackLayout>
+                </StackLayout>
+            </StackLayout>
         </StackLayout>
     </StackLayout>
 </RadSideDrawer>

@@ -1,5 +1,5 @@
 "use strict";
-var core_1 = require("@angular/core");
+var core_1 = require('@angular/core');
 var sidedrawer_service_1 = require("../../shared/sidedrawer.service");
 var HomeComponent = (function () {
     function HomeComponent(sideDrawerService) {
