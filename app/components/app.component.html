@@ -9,21 +9,21 @@
         <StackLayout class="sideStackLayout">
             <StackLayout class="sidedrawer-list-item" orientation="horizontal">
                 <Label text="&#xf015;" class="fa" [nsRouterLink]="['/home']" nsRouterLinkActive="active"></Label>
-                <StackLayout>
+                <StackLayout class="side-link-container">
                     <Label text="Home" [nsRouterLink]="['/home']" class='sideLabel' nsRouterLinkActive="active" [nsRouterLinkActiveOptions]="{exact:true}"></Label>
                     <StackLayout class="hr-light"></StackLayout>
                 </StackLayout>
             </StackLayout>
             <StackLayout class="sidedrawer-list-item" orientation="horizontal">
                 <Label text="&#xf0c0;" class="fa" [nsRouterLink]="['/friends']" nsRouterLinkActive="active"></Label>
-                <StackLayout>
+                <StackLayout class="side-link-container">
                     <Label text="Friends" [nsRouterLink]="['/friends']" class='sideLabel' nsRouterLinkActive="active" [nsRouterLinkActiveOptions]="{exact:true}"></Label>
                     <StackLayout class="hr-light"></StackLayout>
                 </StackLayout>
             </StackLayout>
             <StackLayout class="sidedrawer-list-item" orientation="horizontal">
-                <Label text="&#xf041;" class="fa" [nsRouterLink]="['/places']" nsRouterLinkActive="active"></Label>
-                <StackLayout>
+                <Label text="&#xf041;" class="fa sidedrawer-places" [nsRouterLink]="['/places']" nsRouterLinkActive="active"></Label>
+                <StackLayout class="side-link-container">
                     <Label text="Places" [nsRouterLink]="['/places']" class='sideLabel' nsRouterLinkActive="active" [nsRouterLinkActiveOptions]="{exact:true}"></Label>
                     <StackLayout class="hr-light"></StackLayout>
                 </StackLayout>
@@ -38,21 +38,21 @@
             </StackLayout>-->
             <StackLayout class="sidedrawer-list-item" orientation="horizontal">
                 <Label text="&#xf0a2;" class="fa" [nsRouterLink]="['/notifications']" nsRouterLinkActive="active"></Label>
-                <StackLayout>
+                <StackLayout class="side-link-container">
                     <Label text="Notifications" [nsRouterLink]="['/notifications']" class='sideLabel' nsRouterLinkActive="active" [nsRouterLinkActiveOptions]="{exact:true}"></Label>
                     <StackLayout class="hr-light"></StackLayout>
                 </StackLayout>
             </StackLayout>
             <StackLayout class="sidedrawer-list-item" orientation="horizontal">
                 <Label text="&#xf29c;" class="fa" [nsRouterLink]="['/help']" nsRouterLinkActive="active"></Label>
-                <StackLayout>
+                <StackLayout class="side-link-container">
                     <Label text="Get Help" [nsRouterLink]="['/help']" class='sideLabel' nsRouterLinkActive="active" [nsRouterLinkActiveOptions]="{exact:true}"></Label>
                     <StackLayout class="hr-light"></StackLayout>
                 </StackLayout>
             </StackLayout>
             <StackLayout class="sidedrawer-list-item" orientation="horizontal">
                 <Label text="&#xf013;" class="fa" [nsRouterLink]="['/settings']" nsRouterLinkActive="active"></Label>
-                <StackLayout>
+                <StackLayout class="side-link-container">
                     <Label text="Settings" [nsRouterLink]="['/settings']" class='sideLabel' nsRouterLinkActive="active" [nsRouterLinkActiveOptions]="{exact:true}"></Label>
                     <StackLayout class="hr-light"></StackLayout>
                 </StackLayout>

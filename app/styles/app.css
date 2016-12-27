@@ -18,6 +18,11 @@ components that have the btn class name.
     font-family: "FontAwesome";
 }
 
+ActionBar {
+    background-color: #4296CC;
+    color: #fff;
+}
+
 /*
 In many cases you may want to use the NativeScript core theme instead
 of writing your own CSS rules. For a full list of class names in the theme
