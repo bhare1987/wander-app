@@ -5,19 +5,23 @@ var angular_1 = require("nativescript-telerik-ui/sidedrawer/angular");
 var sidedrawer_service_1 = require("../shared/sidedrawer.service");
 var AppComponent = (function () {
     function AppComponent(router, sideDrawerService) {
+        var _this = this;
         this.router = router;
         this.sideDrawerService = sideDrawerService;
+        this.sideDrawerService.triggerMenu.subscribe(function (triggerMenu) { return _this.toggleDrawer(); });
     }
     AppComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.drawer = this.drawerComponent.sideDrawer;
-        this.sideDrawerService.triggerMenu.subscribe(function (triggerMenu) { return _this.drawer.toggleDrawerState(); });
         this.drawer.ios.attachDrawerToWindow();
         this.router.events.subscribe(function (e) {
             if (e instanceof router_1.NavigationEnd) {
                 _this.drawer.closeDrawer();
             }
         });
+    };
+    AppComponent.prototype.toggleDrawer = function () {
+        this.drawer.toggleDrawerState();
     };
     __decorate([
         core_1.ViewChild(angular_1.RadSideDrawerComponent), 

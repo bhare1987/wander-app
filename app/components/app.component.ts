@@ -13,21 +13,26 @@ export class AppComponent implements OnInit {
     constructor(
         private router: Router,
         private sideDrawerService: SideDrawerService
-    ) {}
+    ) {
+        this.sideDrawerService.triggerMenu.subscribe(
+            triggerMenu => this.toggleDrawer()
+        );
+    }
 
     @ViewChild(RadSideDrawerComponent) public drawerComponent: RadSideDrawerComponent;
     private drawer: SideDrawerType;
 
     ngOnInit() {
         this.drawer = this.drawerComponent.sideDrawer;
-        this.sideDrawerService.triggerMenu.subscribe(
-            triggerMenu => this.drawer.toggleDrawerState()
-        );
         this.drawer.ios.attachDrawerToWindow();
         this.router.events.subscribe((e) => {
             if (e instanceof NavigationEnd) {
                 this.drawer.closeDrawer();
             }
         });
+    }
+
+    toggleDrawer() {
+        this.drawer.toggleDrawerState()
     }
 }
