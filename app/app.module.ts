@@ -2,6 +2,7 @@ import { SIDEDRAWER_DIRECTIVES } from "nativescript-telerik-ui/sidedrawer/angula
 import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
 import { NativeScriptModule } from "nativescript-angular/platform";
 import { NativeScriptRouterModule } from "nativescript-angular/router";
+import { NativeScriptHttpModule } from "nativescript-angular/http";
 import { AppRoutes, AppComponents } from "./app.routing";
 
 import { AppComponent } from "./components/app.component";
@@ -16,6 +17,7 @@ import { SideDrawerService } from "./shared/sidedrawer.service";
     bootstrap: [AppComponent],
     imports: [
         NativeScriptModule,
+        NativeScriptHttpModule,
         NativeScriptRouterModule,
         NativeScriptRouterModule.forRoot(AppRoutes)
     ],

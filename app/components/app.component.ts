@@ -9,7 +9,7 @@ import { SideDrawerService } from "../shared/sidedrawer.service";
     templateUrl: "./components/app.component.html",
     styleUrls: ["./components/app.component.css"]
 })
-export class AppComponent implements OnInit { 
+export class AppComponent implements OnInit {
     constructor(
         private router: Router,
         private sideDrawerService: SideDrawerService
@@ -29,5 +29,5 @@ export class AppComponent implements OnInit {
                 this.drawer.closeDrawer();
             }
         });
-    } 
+    }
 }

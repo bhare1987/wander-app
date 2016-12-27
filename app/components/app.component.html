@@ -15,6 +15,13 @@
                 </StackLayout>
             </StackLayout>
             <StackLayout class="sidedrawer-list-item" orientation="horizontal">
+                <Label text="&#xf015;" class="fa" [nsRouterLink]="['/home']" nsRouterLinkActive="active"></Label>
+                <StackLayout>
+                    <Label text="Login" [nsRouterLink]="['/login']" class='sideLabel' nsRouterLinkActive="active" [nsRouterLinkActiveOptions]="{exact:true}"></Label>
+                    <StackLayout class="hr-light"></StackLayout>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout class="sidedrawer-list-item" orientation="horizontal">
                 <Label text="&#xf0c0;" class="fa" [nsRouterLink]="['/friends']" nsRouterLinkActive="active"></Label>
                 <StackLayout class="side-link-container">
                     <Label text="Friends" [nsRouterLink]="['/friends']" class='sideLabel' nsRouterLinkActive="active" [nsRouterLinkActiveOptions]="{exact:true}"></Label>
