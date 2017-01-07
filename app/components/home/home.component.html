@@ -13,3 +13,6 @@
 <StackLayout>
     <MapView id="map" (mapReady)="onMapReady($event)"></MapView>
 </StackLayout>
+<StackLayout>
+    <TextField hint="Search for Place" [(ngModel)]="address" (propertyChange)="autoComplete($event)"></TextField>
+</StackLayout>
