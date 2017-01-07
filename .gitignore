@@ -2,3 +2,4 @@ node_modules/
 .vscode/
 platforms/
 app/config/
+npm-debug.log

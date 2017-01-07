@@ -21,20 +21,26 @@
                 </StackLayout>
             </StackLayout>
             <StackLayout class="sidedrawer-list-item" orientation="horizontal">
+                <Label text="&#xf1d1;" class="fa" [nsRouterLink]="['/groups']" nsRouterLinkActive="active"></Label>
+                <StackLayout>
+                    <Label text="Groups" [nsRouterLink]="['/groups']" class='sideLabel' nsRouterLinkActive="active" [nsRouterLinkActiveOptions]="{exact:true}"></Label>
+                    <StackLayout class="hr-light"></StackLayout>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout class="sidedrawer-list-item" orientation="horizontal">
                 <Label text="&#xf041;" class="fa sidedrawer-places" [nsRouterLink]="['/places']" nsRouterLinkActive="active"></Label>
                 <StackLayout class="side-link-container">
                     <Label text="Places" [nsRouterLink]="['/places']" class='sideLabel' nsRouterLinkActive="active" [nsRouterLinkActiveOptions]="{exact:true}"></Label>
                     <StackLayout class="hr-light"></StackLayout>
                 </StackLayout>
             </StackLayout>
-            <!--<StackLayout class="sidedrawer-list-item" orientation="horizontal">
-                NOTE: SHOULD WE MAKE THIS AN OPTION UNDER FRIENDS? THAT MAKES MORE SENSE TO ME AND WOULD REDUCE CLUTTER IN THE NAV
+            <StackLayout class="sidedrawer-list-item" orientation="horizontal">
                 <Label text="&#xf015;" class="fa" [nsRouterLink]="['/invitations']" nsRouterLinkActive="active"></Label>
                 <StackLayout>
                     <Label text="Invite Friends" [nsRouterLink]="['/invitations']" class='sideLabel' nsRouterLinkActive="active" [nsRouterLinkActiveOptions]="{exact:true}"></Label>
                     <StackLayout class="hr-light"></StackLayout>
                 </StackLayout>
-            </StackLayout>-->
+            </StackLayout>
             <StackLayout class="sidedrawer-list-item" orientation="horizontal">
                 <Label text="&#xf0a2;" class="fa" [nsRouterLink]="['/notifications']" nsRouterLinkActive="active"></Label>
                 <StackLayout class="side-link-container">

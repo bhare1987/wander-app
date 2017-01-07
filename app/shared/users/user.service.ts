@@ -4,7 +4,6 @@ import * as tnsOAuthModule from 'nativescript-oauth';
 import { WANDER_BASE_API } from "../../config/keys"
 var fetchModule = require('fetch');
 
-
 import { User } from "./user";
 
 @Injectable()

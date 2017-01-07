@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { SideDrawerService } from "../../shared/sidedrawer.service";
 
+
 @Component({
-    selector: 'wander-places',
-    templateUrl: './components/places/places.component.html',
-    styleUrls: ['./components/places/places.component.css']
+    selector: 'wander-groups',
+    templateUrl: './components/groups/groups.component.html',
+    styleUrls: ['./components/groups/groups.component.css']
 })
 
-export class PlacesComponent implements OnInit {
+export class GroupsComponent implements OnInit {
   constructor(
       private sideDrawerService: SideDrawerService
   ) {}
