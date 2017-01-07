@@ -1,9 +1,11 @@
 <RadSideDrawer tkExampleTitle tkToggleNavButton [showOverNavigation]="true">
     <StackLayout tkDrawerContent class="sideStackLayout">
-        <StackLayout class="sidedrawer-header">
-            <!--<Image class="sidedrawer-header-image img-circle sidedrawer-left" src="http://placehold.it/25x25"></Image>-->
-            <Label text="User"></Label>
-            <Label text="UserName"></Label>
+        <StackLayout class="sidedrawer-header" orientation="horizontal">
+            <Image class="img-circle sidedrawer-left" src="~/assets/placeholder.jpg"></Image>
+            <StackLayout class="sidedrawer-header-content">
+                <Label text="User"></Label>
+                <Label text="UserName"></Label>
+            </StackLayout>
         </StackLayout>
         <StackLayout class="sideStackLayout">
             <StackLayout class="sidedrawer-list-item" orientation="horizontal">

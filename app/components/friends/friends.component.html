@@ -5,3 +5,13 @@
       </StackLayout>
   </ActionItem>
 </ActionBar>
+<GridLayout>
+    <ListView [items]="friends" (itemTap)="onFriendSelect($event)" class="list-group">
+        <Template let-friend="item" let-odd="odd" let-even="even">
+            <StackLayout class="list-group-item" orientation="horizontal">
+                <Image height="30" width="30" class="img-circle" [src]="friend.image"></Image>
+                <Label [text]="friend.name"></Label>
+            </StackLayout>
+        </Template>
+    </ListView>
+</GridLayout>

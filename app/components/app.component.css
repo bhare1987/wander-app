@@ -32,3 +32,15 @@
 .sideLabel {
     margin-bottom: 10;
 }
+
+Image {
+    width: 75;
+    height: 75;
+    margin-bottom: 25;
+    margin-left: 15;
+    margin-right: 15;
+}
+
+.sidedrawer-header-content {
+    padding-top: 40;
+}
