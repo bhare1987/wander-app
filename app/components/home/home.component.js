@@ -2,6 +2,7 @@
 var core_1 = require('@angular/core');
 var sidedrawer_service_1 = require("../../shared/sidedrawer.service");
 var element_registry_1 = require('nativescript-angular/element-registry');
+var GooglePlaces = require("nativescript-google-places");
 element_registry_1.registerElement("MapView", function () { return require("nativescript-google-maps-sdk").MapView; });
 var HomeComponent = (function () {
     function HomeComponent(sideDrawerService) {
@@ -11,6 +12,10 @@ var HomeComponent = (function () {
             console.log("Map Ready");
         };
     }
+    HomeComponent.prototype.autoComplete = function (event) {
+        console.log(event.value);
+        GooglePlaces.queryAutoComplete(event.value, 'restaurants').then(function (data) { return console.log("SHIT FROM GOOGLE", JSON.stringify(data)); });
+    };
     HomeComponent.prototype.toggleMenu = function () {
         this.sideDrawerService.toggleMenu();
     };

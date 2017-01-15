@@ -5,9 +5,16 @@ import { FACEBOOK_CLIENT_ID } from './config/keys';
 import { FACEBOOK_CLIENT_SECRET } from './config/keys';
 import * as tnsOAuthModule from 'nativescript-oauth';
 import { AppModule } from "./app.module";
+const GooglePlaces = require("nativescript-google-places");
 
 import * as platform from "platform";
 declare var GMSServices: any;
+
+GooglePlaces.init({
+  googleServerApiKey: GOOGLE_MAP_API,
+  language: 'en',
+  radius: '100000'
+})
 
 var facebookInitOptions : tnsOAuthModule.ITnsOAuthOptionsFacebook = {
     clientId: FACEBOOK_CLIENT_ID,
@@ -16,7 +23,6 @@ var facebookInitOptions : tnsOAuthModule.ITnsOAuthOptionsFacebook = {
 };
 
 tnsOAuthModule.initFacebook(facebookInitOptions);
-
 
 // before calling .boostrap
 if( platform.isIOS ) {
