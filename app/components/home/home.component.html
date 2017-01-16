@@ -20,4 +20,13 @@
 </StackLayout>
 <StackLayout>
     <TextField hint="Search for Place" [(ngModel)]="address" (propertyChange)="autoComplete($event)"></TextField>
+    <GridLayout>
+        <ListView [items]="places" (itemTap)="onPlaceSelect($event)" class="list-group">
+            <Template let-place="item">
+                <StackLayout class="list-group-item" orientation="horizontal">
+                    <Label [text]="place.description"></Label>
+                </StackLayout>
+            </Template>
+        </ListView>
+    </GridLayout>
 </StackLayout>

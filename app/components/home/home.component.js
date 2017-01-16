@@ -2,6 +2,7 @@
 var core_1 = require('@angular/core');
 var sidedrawer_service_1 = require("../../shared/sidedrawer.service");
 var element_registry_1 = require('nativescript-angular/element-registry');
+var geolocation = require("nativescript-geolocation");
 var GooglePlaces = require("nativescript-google-places");
 element_registry_1.registerElement("MapView", function () { return require("nativescript-google-maps-sdk").MapView; });
 var HomeComponent = (function () {
@@ -12,9 +13,26 @@ var HomeComponent = (function () {
             console.log("Map Ready");
         };
     }
+    HomeComponent.prototype.ngOnInit = function () {
+        console.log('=======GEOLOCATION=======', geolocation);
+        geolocation.enableLocationRequest();
+        if (!geolocation.isEnabled()) {
+            console.log('we fired');
+            geolocation.enableLocationRequest();
+        }
+        geolocation.getCurrentLocation({ desiredAccuracy: 3, updateDistance: 10, maximumAge: 20000, timeout: 20000 })
+            .then(function (loc) {
+            console.log('current', loc);
+        });
+    };
     HomeComponent.prototype.autoComplete = function (event) {
+        var _this = this;
         console.log(event.value);
-        GooglePlaces.queryAutoComplete(event.value, 'restaurants').then(function (data) { return console.log("SHIT FROM GOOGLE", JSON.stringify(data)); });
+        GooglePlaces.queryAutoComplete(event.value, 'restaurants')
+            .then(function (data) { return _this.places = data; });
+    };
+    HomeComponent.prototype.onPlaceSelect = function (event) {
+        console.log('place!', event);
     };
     HomeComponent.prototype.toggleMenu = function () {
         this.sideDrawerService.toggleMenu();

@@ -6,7 +6,13 @@ var keys_2 = require('./config/keys');
 var keys_3 = require('./config/keys');
 var tnsOAuthModule = require('nativescript-oauth');
 var app_module_1 = require("./app.module");
+var GooglePlaces = require("nativescript-google-places");
 var platform = require("platform");
+GooglePlaces.init({
+    googleServerApiKey: keys_1.GOOGLE_MAP_API,
+    language: 'en',
+    radius: '100000'
+});
 var facebookInitOptions = {
     clientId: keys_2.FACEBOOK_CLIENT_ID,
     clientSecret: keys_3.FACEBOOK_CLIENT_SECRET,

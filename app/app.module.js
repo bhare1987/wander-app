@@ -2,6 +2,7 @@
 var angular_1 = require("nativescript-telerik-ui/sidedrawer/angular");
 var core_1 = require("@angular/core");
 var platform_1 = require("nativescript-angular/platform");
+var forms_1 = require("nativescript-angular/forms");
 var router_1 = require("nativescript-angular/router");
 var http_1 = require("nativescript-angular/http");
 var app_routing_1 = require("./app.routing");
@@ -22,6 +23,7 @@ var AppModule = (function () {
                 platform_1.NativeScriptModule,
                 http_1.NativeScriptHttpModule,
                 router_1.NativeScriptRouterModule,
+                forms_1.NativeScriptFormsModule,
                 router_1.NativeScriptRouterModule.forRoot(app_routing_1.AppRoutes)
             ],
             providers: [
