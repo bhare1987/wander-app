@@ -14,16 +14,17 @@ var HomeComponent = (function () {
         };
     }
     HomeComponent.prototype.ngOnInit = function () {
-        console.log('=======GEOLOCATION=======', geolocation);
-        geolocation.enableLocationRequest();
         if (!geolocation.isEnabled()) {
             console.log('we fired');
-            geolocation.enableLocationRequest();
+            geolocation.enableLocationRequest()
+                .then(function () {
+                geolocation.getCurrentLocation({ desiredAccuracy: 3, updateDistance: 10, maximumAge: 20000, timeout: 20000 });
+            })
+                .then(function (loc) {
+                console.log('current location', loc);
+            })
+                .catch(function (err) { return console.log('error', err); });
         }
-        geolocation.getCurrentLocation({ desiredAccuracy: 3, updateDistance: 10, maximumAge: 20000, timeout: 20000 })
-            .then(function (loc) {
-            console.log('current', loc);
-        });
     };
     HomeComponent.prototype.autoComplete = function (event) {
         var _this = this;
@@ -32,7 +33,7 @@ var HomeComponent = (function () {
             .then(function (data) { return _this.places = data; });
     };
     HomeComponent.prototype.onPlaceSelect = function (event) {
-        console.log('place!', event);
+        console.log('Place!');
     };
     HomeComponent.prototype.toggleMenu = function () {
         this.sideDrawerService.toggleMenu();

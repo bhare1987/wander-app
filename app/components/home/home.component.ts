@@ -15,20 +15,21 @@ export class HomeComponent implements OnInit {
     @ViewChild("MapView") mapView: ElementRef;
     public address : Object;
     public places: Array<any>;
-    public watchID;
+    public location;
     constructor( private sideDrawerService: SideDrawerService ) {}
 
     ngOnInit() {
-        console.log('=======GEOLOCATION=======', geolocation)
-        geolocation.enableLocationRequest();
         if (!geolocation.isEnabled()) {
             console.log('we fired')
-            geolocation.enableLocationRequest();
-        } 
-        geolocation.getCurrentLocation({desiredAccuracy: 3, updateDistance: 10, maximumAge: 20000, timeout: 20000})
+            geolocation.enableLocationRequest()
+            .then(() => {
+                geolocation.getCurrentLocation({desiredAccuracy: 3, updateDistance: 10, maximumAge: 20000, timeout: 20000})
+            })
             .then(loc => {
-                console.log('current', loc)
-            });
+                console.log('current location', loc)
+            })
+            .catch(err => console.log('error', err));
+        } 
     }
 
     autoComplete(event: any) {
@@ -38,13 +39,13 @@ export class HomeComponent implements OnInit {
     }
 
     onPlaceSelect(event) {
-        console.log('place!', event);
+        console.log('Place!');
     }
 
    //Map events
    onMapReady = (event) => {
        console.log("Map Ready");
-       
+
    };
 
     toggleMenu() {
